@@ -1,5 +1,6 @@
 def on_received_number(receivedNumber):
     if receivedNumber == 1:
+        music.set_volume(60)
         music.start_melody(music.built_in_melody(Melodies.NYAN), MelodyOptions.ONCE)
         for index in range(8):
             basic.show_leds("""
@@ -31,9 +32,10 @@ def on_received_number(receivedNumber):
                                 # # # # #
             """)
     elif receivedNumber == 2:
+        music.set_volume(60)
         music.start_melody(music.built_in_melody(Melodies.DADADADUM),
             MelodyOptions.ONCE)
-        for index2 in range(4):
+        for index2 in range(3):
             basic.show_leds("""
                 . . . . .
                                 . . . . .
@@ -70,6 +72,7 @@ def on_received_number(receivedNumber):
                                 # # # # #
             """)
     elif receivedNumber == 3:
+        music.set_volume(60)
         basic.show_leds("""
             . # # # .
                         # . . . #
@@ -78,6 +81,7 @@ def on_received_number(receivedNumber):
                         . . # . .
         """)
     elif receivedNumber == 4:
+        music.set_volume(60)
         basic.show_leds("""
             . . # . .
                         . # . # .
@@ -93,7 +97,7 @@ radio.on_received_number(on_received_number)
 
 def on_button_pressed_a():
     global a
-    a = 2
+    a = randint(1, 4)
     if a == 1:
         radio.send_number(1)
         music.set_volume(60)

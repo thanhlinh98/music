@@ -1,7 +1,5 @@
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 1) {
-        music.setVolume(60)
-        music.startMelody(music.builtInMelody(Melodies.Nyan), MelodyOptions.Once)
         for (let index = 0; index < 8; index++) {
             basic.showLeds(`
                 . . . . .
@@ -33,9 +31,7 @@ radio.onReceivedNumber(function (receivedNumber) {
                 `)
         }
     } else if (receivedNumber == 2) {
-        music.setVolume(60)
-        music.startMelody(music.builtInMelody(Melodies.Dadadadum), MelodyOptions.Once)
-        for (let index = 0; index < 4; index++) {
+        for (let index = 0; index < 3; index++) {
             basic.showLeds(`
                 . . . . .
                 . . . . .
@@ -73,7 +69,6 @@ radio.onReceivedNumber(function (receivedNumber) {
                 `)
         }
     } else if (receivedNumber == 3) {
-        music.setVolume(60)
         basic.showLeds(`
             . # # # .
             # . . . #
@@ -82,7 +77,6 @@ radio.onReceivedNumber(function (receivedNumber) {
             . . # . .
             `)
     } else if (receivedNumber == 4) {
-        music.setVolume(60)
         basic.showLeds(`
             . . # . .
             . # . # .
